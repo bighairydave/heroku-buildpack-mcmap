@@ -1,2 +1,12 @@
 #!/bin/sh
 
+BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
+BUILD_DIR=$1
+CACHE_DIR=$2
+COMPILE_DIR="$(mktmpdir overviewer_compile)"
+
+echo "-----> Moving rack static structure"
+
+rm $BUILD_DIR/*
+cp -r $BUILDPACK_DIR/rack-static/* $BUILD_DIR/
+
