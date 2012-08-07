@@ -1,5 +1,13 @@
 #!/bin/sh
 
+# Loaned from nodejs buildpack
+function mktmpdir() {
+  dir=$(mktemp -t node-$1-XXXX)
+  rm -rf $dir
+  mkdir -p $dir
+  echo $dir
+}
+
 BUILDPACK_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILD_DIR=$1
 CACHE_DIR=$2
