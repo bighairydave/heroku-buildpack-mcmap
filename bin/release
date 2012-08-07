@@ -1,9 +1,6 @@
 #!/bin/sh
-
-cat << EOF
+cat <<EOF
 ---
-config_vars:
-  PATH: bin:/usr/bin:/bin
 default_process_types:
-  web: bundle exec thin start -p $PORT -e $RACK_ENV
+web: sh boot.sh
 EOF
