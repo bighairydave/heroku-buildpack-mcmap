@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Loaned from nodejs buildpack
-function mktmpdir() {
+mktmpdir() {
   dir=$(mktemp -t node-$1-XXXX)
   rm -rf $dir
   mkdir -p $dir
