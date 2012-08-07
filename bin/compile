@@ -5,8 +5,24 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 COMPILE_DIR="$(mktmpdir overviewer_compile)"
 
-echo "-----> Moving rack static structure"
+transformWorldDataToHTML() {
+  echo "-----> Transforming World data to HTML"
+  echo "WIP"
+}
 
-rm $BUILD_DIR/*
-cp -r $BUILDPACK_DIR/rack-static/* $BUILD_DIR/
+cleanUpLevelDataFromBuildDir()
+{
+  echo "-----> Moving rack static structure"
+  rm $BUILD_DIR/*
+  cp -r $BUILDPACK_DIR/rack-static/* $BUILD_DIR/
+}
 
+moveWorldHTMLToBuildDir()
+{
+  echo "-----> Taking world HTML in use"
+  echo "WIP"
+}
+
+transformWorldDataToHTML
+cleanUpLevelDataFromBuildDir
+moveWorldHTMLToBuildDir
