@@ -22,7 +22,7 @@ cleanUpLevelDataFromBuildDir()
 {
   echo "-----> Moving rack static structure"
   rm $BUILD_DIR/*
-  cp -r $BUILDPACK_DIR/rack-static/* $BUILD_DIR/
+  cp -r $BUILDPACK_DIR/www $BUILD_DIR/
 }
 
 moveWorldHTMLToBuildDir()
